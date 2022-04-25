@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<header class="hero-section">
+    <h3 class="header-text">Welcome to The Hero Page {{ current_user.first_name }}!</h3>
+</header>
+
+<div class="container">
+    <h3>Profile Details:</h3>
+    <ul class="list-group">
+        <li class="list-group-item">First Name:  {{ current_user.first_name }}</li>
+        <li class="list-group-item">Last Name:  {{ current_user.last_name }}</li>
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token:  {{ current_user.token }}</li>
+                
+    </ul>
+</div>
+
+{% for hero in heroes %} 
+
+<div class="card" style="width: 18rem;">
+    <img src="../../static/images/undraw_superhero_kguv.svg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <p class="card-text">NAME: {{ hero.name }} 
+                        <br>ALIAS: {{ hero.alias }} 
+                        <br>SPECIES: {{hero.species}}
+                        <br>DESCRIPTION: {{hero.description}}
+                        <br>POWERS: {{ hero.powers }}
+                        <br>MAX SPEED: {{ hero.max_speed }}
+                        <br>MAX STRENGTH: {{ hero.max_strength }} </p>
+    </div>
+</div>
+
+{% endfor %} 
+
+
+{% endblock content %}

@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!-- Flask Flashed Messages to User -->
+<div class="container">
+   {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat, msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss = "alert" onclick="this.parentElement.style.display='none'">&times;</button>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="container">
+    <!--Header-->
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>The site where you can build your own hero.</h2>
+            <h5>Creating the heros you want, not the heros you need.</h5>
+            <div>
+                <button class="btn btn-primary">View Our Docs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+        </div>
+        
+        <div class="col-12 col-md-6">
+            <img class="header-image" src="../../static/images/undraw_sculpting_-1-c9p.svg" alt="Hero Header Image">
+        </div>
+    </header>
+    <!--End of Header-->
+
+    <section class="row">
+        <div class="col-12" id="middle-text">
+            <h2>Display Your Collection of Heroes!</h2>
+            <p>You can harness the power of an API to expand your collection!</p>
+        </div>
+    </section>
+
+    <!--Features-->
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+          <img src="../../static/images/api.png" alt="API Image" id="api-image"> 
+          <h4>Dedicated API Routes</h4>
+          <p>
+              If you are a fan of using traditional API routes, we have those for you!
+          </p>
+        </div>
+        <div class="col-12 col-md-4">
+        <img src="../../static/images/graphql.png" alt="graphql-image" id="graphql-image">
+        <h4>GraphQL API Route</h4>
+        <p>
+            If you want ALL data from one endpoint, we have that too!
+        </p>
+    </div>
+
+        <div class="col-12 col-md-4">
+           <img src="../../static/images/db.png" alt="database image" id="database-image">
+           <h4>Backed by a PostgreSQL Database</h4>
+           <p>
+               All data will be persisted inside of a secure Postgres Database
+           </p>
+        </div>
+    </section>
+    <!--Features-->
+
+    <!-- Community -->
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/undraw_group_chat_re_frmo.svg" alt="Chat Image" id="Chat-image">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <h4>Talk with like minded hero creators</h4>
+            <p>
+                Talk with other devs around the world and collab
+                on projects with your data. Join our slack channel and give
+                a star to the project on Github!
+            </p>
+            <div>
+                <button class="btn btn-primary">View On Github</button>
+                <button class="btn btn-primary">Join Our Slack Channel!</button>
+            </div>
+        </div>
+    </section>
+    <!--Community-->
+
+    <!--Footer-->
+    <footer class="row" id="footer">
+        <div class="col-2 col-md-2">
+            <img src="../../static/images/undraw_super_woman_dv-0-y (1).svg" alt="Hero Page Logo" id="footer-logo">
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Create heroes?</p>
+                <p>The Hero Page Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Create heroes?</p>
+                <p>The Hero Page Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Create heroes?</p>
+                <p>The Hero Page Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Create heroes?</p>
+                <p>The Hero Page Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Create heroes?</p>
+                <p>The Hero Page Project</p>
+                <p>Donate</p>
+                <p>Spread The Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+{% endblock content %}

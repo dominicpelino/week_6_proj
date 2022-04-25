@@ -1,0 +1,45 @@
+<form method = "POST">
+
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+
+        <fieldset id="name-field">
+            {{ form.name.label }}
+            {{ form.name(class = "form-control", placeholder = "Name Here") }}
+        </fieldset>
+
+        <fieldset id="alias-field">
+            {{ form.alias.label }}
+            {{ form.alias(class = "form-control", placeholder = "Alias Here") }}
+        </fieldset>
+
+        <fieldset id="species-field">
+            {{ form.species.label }}
+            {{ form.species(class = "form-control", placeholder = "Species Here") }}
+        </fieldset>
+
+        <fieldset id="description-field">
+            {{ form.description.label }}
+            {{ form.description(class = "form-control", placeholder = "Description Here") }}
+        </fieldset>
+
+        <fieldset id="powers-field">
+            {{ form.powers.label }}
+            {{ form.powers(class = "form-control", placeholder = "Powers Here") }}
+        </fieldset>
+
+        <fieldset id="max_speed-field">
+            {{ form.max_speed.label }}
+            {{ form.max_speed(class = "form-control", placeholder = "Max Speed Here") }}
+        </fieldset>
+
+        <fieldset id="max_strength-field">
+            {{ form.max_strength.label }}
+            {{ form.max_strength(class = "form-control", placeholder = "Max Strength Here") }}
+        </fieldset>
+
+        {{ form.submit_button(class = "btn-primary btn-block") }}
+    </div>
+
+
+</form>
